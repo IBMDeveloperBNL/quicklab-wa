@@ -54,6 +54,7 @@ Below the output of the finished intents:
 7. Turn on `@sys-number`.
 
 Here is how your finished entity `@drink` should look:
+
 ![finished entity](https://github.com/desmarchris/think-lab/blob/master/pictures/finished-entity.png)
 
 ## Building Dialog
@@ -74,6 +75,7 @@ Here is how your finished entity `@drink` should look:
 15. Add in the response, "Ok, I have $number $drink coming right up!".
 
 Finished dialog tree with `Order Drink` open:
+
 ![finished dialog](https://github.com/desmarchris/think-lab/blob/master/pictures/finished-dialog.png)
 
 ## If you want more...
@@ -81,6 +83,7 @@ Did you finish the above and want to learn more? Try some of the following metho
 
 ### Resetting context
 If your user orders a drink and completes the flow, and they try to make another order, the values found from the first flow will still be there so they will not be able to order something else. To fix this, we need to clear the context after a successful order so the values are not stored for the next order.
+
 1. Create a node above the Slots node `Order Drink` called `Order Drink - Clear Context`.
 2. Set the condition to `#order-drink`.
 3. In the response section, click on the three button menu on the right and click on `Open context editor`.
@@ -88,10 +91,12 @@ If your user orders a drink and completes the flow, and they try to make another
 5. Click on the three dot menu on the right side of original Slots node `Order Drink`, and select `Move`. Then, click the new context clearing node and move to `As Child Node` (So, the parent node is the context clearing node, and the slots node is the child).
 6. Go to the section called `And finally` at the bottom of the context clearing node. Select `Skip user input`.
 7. Try it out! Without clearing the try it out panel, order a drink. Once finished, try ordering another drink and it should prompt you for the two needed variables again. Here's what the finished context clearing node will look like:
+
 ![clear context](https://github.com/desmarchris/think-lab/blob/master/pictures/clear-context.png)
 
 ### Help - Digressions
 Sometimes, you will want an intent to be handled no matter where the user is in their flow. Think of Digressions as a global 'manage handlers': they allow you to respond to an intent even if a user is in the middle of a process flow, and then it allows them to return to their prior flow. If your user wants some help talking to the bot anywhere in your bot, this is a good intent to have digressions enabled.
+
 1. Create a `#help` intent with examples like: "I need help".
 2. Create a node below your `Order Drink` node.
 3. Add the condition of `#help` with a response like: "I can help you order a drink from my coffee shop. Just say order drink to get started!".
