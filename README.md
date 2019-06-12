@@ -88,7 +88,7 @@ You successfully completed the lab!! Want to learn more? Try some of the followi
 <br>
 <br>
 <br>
-### Resetting context
+### [Optional] Resetting context
 If your user orders a drink and completes the flow, and they try to make another order, the values found from the first flow will still be there so they will not be able to order something else. To fix this, we need to clear the context after a successful order so the values are not stored for the next order.
 
 1. Create a node above the Slots node `Order Drink` called `Order Drink - Clear Context`.
@@ -101,7 +101,7 @@ If your user orders a drink and completes the flow, and they try to make another
 
 ![clear context](./pictures/clear-context.png)
 
-### Help - Digressions
+### [Optional] Help - Digressions
 Sometimes, you will want an intent to be handled no matter where the user is in their flow. Think of Digressions as a global 'manage handlers': they allow you to respond to an intent even if a user is in the middle of a process flow, and then it allows them to return to their prior flow. If your user wants some help talking to the bot anywhere in your bot, this is a good intent to have digressions enabled.
 
 1. Create a `#help` intent with examples like: "I need help".
