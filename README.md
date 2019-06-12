@@ -17,7 +17,7 @@ We will be creating a bot to take coffee orders.
 1. Once in the tooling, click `Create a Skill` to go to the **Skills** tab. Click `Create skill` to create your first skill.
 2. Name it something like `Coffee-bot` and select the desired language (typically US-English). Finally, click `Create dialog skill` to create your skill.
 
-## Building Intents
+## Creating Intents
 1. Click `Create intent`.
 2. Name the new intent `order-drink`.
 3. Add a description of what the intent will do. For this, let's use "User wants to order a drink.".
@@ -37,9 +37,9 @@ We will be creating a bot to take coffee orders.
   
 Below the output of the finished intents:
 
-![finished intents](https://github.com/desmarchris/think-lab/blob/master/pictures/finished-intents.png)
+![finished intents](./pictures/finished-intents.png)
 
-## Building Entities
+## Creating Entities
 1. Click on the `Entities` tab at the top of the page.
 2. Click `Create entity` and add the name `drink`. Press Enter to actually create the intent.
 3. Turn `Fuzzy Matching` on if you want Watson to understand misspellings (should be on by default).
@@ -50,14 +50,18 @@ Below the output of the finished intents:
     - latte
     - tea
 6. Exit the page, and click on `System entities` underneath the `Entities` tab.
-![image](image)
+
+![system entities 1](./pictures/sys-entity-1.png)
+
+![system entities 2](./pictures/sys-entity-2.png)
+
 7. Turn on `@sys-number`.
 
 Here is how your finished entity `@drink` should look:
 
-![finished entity](https://github.com/desmarchris/think-lab/blob/master/pictures/finished-entity.png)
+![finished entity](./pictures/finished-entity.png)
 
-## Building Dialog
+## Creating a Dialog
 1. Click on the `Dialog` tab at the top of the page.
 2. Click `Create dialog`.
 3. Click on the `Welcome` node if you would like to change the intro message.
@@ -76,7 +80,7 @@ Here is how your finished entity `@drink` should look:
 
 Finished dialog tree with `Order Drink` open:
 
-![finished dialog](https://github.com/desmarchris/think-lab/blob/master/pictures/finished-dialog.png)
+![finished dialog](./pictures/finished-dialog.png)
 
 ## If you want more...
 Did you finish the above and want to learn more? Try some of the following methods to bolster your CoffeeBot.
@@ -92,7 +96,7 @@ If your user orders a drink and completes the flow, and they try to make another
 6. Go to the section called `And finally` at the bottom of the context clearing node. Select `Skip user input`.
 7. Try it out! Without clearing the try it out panel, order a drink. Once finished, try ordering another drink and it should prompt you for the two needed variables again. Here's what the finished context clearing node will look like:
 
-![clear context](https://github.com/desmarchris/think-lab/blob/master/pictures/clear-context.png)
+![clear context](./pictures/clear-context.png)
 
 ### Help - Digressions
 Sometimes, you will want an intent to be handled no matter where the user is in their flow. Think of Digressions as a global 'manage handlers': they allow you to respond to an intent even if a user is in the middle of a process flow, and then it allows them to return to their prior flow. If your user wants some help talking to the bot anywhere in your bot, this is a good intent to have digressions enabled.
