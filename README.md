@@ -49,13 +49,13 @@ Below the output of the finished intents:
     - cappuccino
     - latte
     - tea
-6. Exit the page, and click on `System entities` underneath the `Entities` tab.
+6. Exit the page (1), and click on `System entities` (2) underneath the `Entities` tab.
 
 ![system entities 1](./pictures/sys-entity-1.png)
 
-![system entities 2](./pictures/sys-entity-2.png)
-
 7. Turn on `@sys-number`.
+
+![system entities 2](./pictures/sys-entity-2.png)
 
 Here is how your finished entity `@drink` should look:
 
@@ -78,7 +78,7 @@ Here is how your finished entity `@drink` should look:
 14. Click `Add slot`, and add a condition and prompt for `@sys-number`: "How many cups of $drink would you like?" (Note: the syntax `$variable` is short hand for accessing Context variables. Context variables allow you to pass information between your application and Conversation).
 15. Add in the response, "Ok, I have $number $drink coming right up!".
 
-Finished dialog tree with `Order Drink` open:
+Below an example of the finished dialog tree with the `Order Drink` node open:
 
 ![finished dialog](./pictures/finished-dialog.png)
 
