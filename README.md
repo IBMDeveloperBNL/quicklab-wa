@@ -85,7 +85,9 @@ Below an example of the finished dialog tree with the `Order Drink` node open:
 **CONGRATULATIONS!!** :smiley: :+1: 
 
 You successfully completed the lab!! Want to learn more? Try some of the following methods to bolster your CoffeeBot.
-
+<br>
+<br>
+<br>
 ### Resetting context
 If your user orders a drink and completes the flow, and they try to make another order, the values found from the first flow will still be there so they will not be able to order something else. To fix this, we need to clear the context after a successful order so the values are not stored for the next order.
 
