@@ -23,17 +23,17 @@ We will be creating a bot to take coffee orders.
 3. Add a description of what the intent will do. For this, let's use "User wants to order a drink.".
 4. Hit `Enter` to create the intent.
 5. Start adding a few exaxmples of how a user would order a drink (at least 5 examples are recommended). Let's use the following:
-  - i would like to order a coffee please
-  - I need some caffeine
-  - order espresso
-  - a cappuccino would be lovely
-  - a latte please
+    - i would like to order a coffee please
+    - I need some caffeine
+    - order espresso
+    - a cappuccino would be lovely
+    - a latte please
 6. Open the `Try it Out` panel by clicking on the speech bubble in the upper right corner. This allows you to test how your bot will respond.
 7. Wait for the bot to finish training, then type `can I order a coffee`. It should classify the intent as `#order-drink`. Even though you didn't train the intent on this exact sentence, Watson can still understand it.
 8. Add a few more intents to make your bot more robust (click the `Create Intent` button for this). Try to create the following intents and add a few examples to each:
-  - #see-menu (User wants to see what's on the menu)
-  - #greetings (User greets the bot)
-  - #thanks (User thanks the bot)
+    - #see-menu (User wants to see what's on the menu)
+    - #greetings (User greets the bot)
+    - #thanks (User thanks the bot)
   
 Below the output of the finished intents:
 ![finished intents](https://github.com/desmarchris/think-lab/blob/master/pictures/finished-intents.png)
@@ -44,10 +44,10 @@ Below the output of the finished intents:
 3. Turn `Fuzzy Matching` on if you want Watson to understand misspellings (should be on by default).
 4. Add a value `coffee` with the synonym of `cafe`. 
 5. Add some additional values that you allow your users to order and any synonyms, for example:
-  - espresso
-  - cappuccino
-  - latte
-  - tea
+    - espresso
+    - cappuccino
+    - latte
+    - tea
 6. Exit the page, and click on `System entities` underneath the `Entities` tab.
 ![image](image)
 7. Turn on `@sys-number`.
