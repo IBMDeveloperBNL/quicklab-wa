@@ -2,23 +2,23 @@
 We will be creating a bot to take coffee orders.
 
 ## Creating an IBM Cloud Account
-1. Go to this link and create an account: https://console.bluemix.net/registration/
-2. Or, go to https://console.bluemix.net/ and login if you have an account already and login
+1. Go to this link and create an account: https://ibm.biz/Bd2Um2
+2. Or, go to https://cloud.ibm.com/ and login if you have an account already.
 
 ## Provisioning a Watson Assistant instance
 1. Once logged in, click on `Catalog` in the upper right corner of the screen
 2. Search for `Assistant`
-3. Under the `Watson` Category, click on `Assistant`
+3. Under the `AI` Category, click on `Assistant`
 4. Scroll down and make sure `Lite` Plan is selected for the free plan
 5. Click `Create`
-6. Click on `Launch tool`
+6. Click on `Launch Watson Assistant`
 
-## Creating a workspace
-1. Once in the tooling, click `Create` to add a new workspace
-2. Name it something like `Coffee-bot` and select the desired language
+## Creating a skill
+1. Once in the tooling, click `Create a Skill` to go to the Skills tab. Click `Create skill` to create your first skill.
+2. Name it something like `Coffee-bot` and select the desired language. Finally, click `Create dialog skill` to create your skill.
 
 ## Building Intents
-1. Click `Add intent`
+1. Click `Create intent`
 2. Name the new intent `order-drink`
 3. Add a description of what the intent will do. For this, let's use "User wants to order a drink."
 4. Hit `Enter` to create the intent
@@ -30,18 +30,18 @@ We will be creating a bot to take coffee orders.
   - a latte please
 6. Open the `Try it Out` panel by clicking on the speech bubble in the upper right corner. This allows you to test how your bot will respond
 7. Wait for the bot to finish training, then type `can I order a coffee`. It should classify the intent as `#order-drink`. Even though you didn't train the intent on this exact sentence, Watson can still understand it.
-8. Add a few more intents to make your bot more robust. Try creating the following intents and adding a few examples to each:
+8. Add a few more intents to make your bot more robust (click the `Create Intent` button for this). Try to create the following intents and add a few examples to each:
   - #see-menu (User wants to see what's on the menu)
   - #greetings (User greets the bot)
   - #thanks (User thanks the bot)
   
-Here are the finished intents:
+Below the output of the finished intents:
 ![finished intents](https://github.com/desmarchris/think-lab/blob/master/pictures/finished-intents.png)
 
 ## Building Entities
 1. Click on the `Entities` tab at the top of the page
-2. Click `Add entity` and add the name `drink`
-3. Turn `Fuzzy Matching` on if you want Watson to understand misspellings
+2. Click `Create entity` and add the name `drink`. Press Enter to actually create the intent.
+3. Turn `Fuzzy Matching` on if you want Watson to understand misspellings (should be on by default).
 4. Add a value `coffee` with the synonym of `cafe`. 
 5. Add some additional values that you allow your users to order and any synonyms, for example:
   - espresso
@@ -49,6 +49,7 @@ Here are the finished intents:
   - latte
   - tea
 6. Exit the page, and click on `System entities` underneath the `Entities` tab
+![image](image)
 7. Turn on `@sys-number`
 
 Here is how your finished entity `@drink` should look:
@@ -56,8 +57,8 @@ Here is how your finished entity `@drink` should look:
 
 ## Building Dialog
 1. Click on the `Dialog` tab at the top of the page
-2. Click `Create`
-3. Click on the `Welcome` node if you would like to change the intro message
+2. Click `Create dialog`
+3. Click on the `Welcome` node if you would like to change the intro message.
 4. Click `Add node`, and name it `Greetings`
 5. Add your `#greetings` intent as the field for `If bot recognizes`
 6. Fill in a response that says something like "Hi! How can I help you today?"
@@ -87,6 +88,7 @@ Now that you have a functioning bot, let's do a quick deploy to see it working i
 
 ![finished bot](https://github.com/desmarchris/think-lab/blob/master/pictures/finished-bot.png)
 
+
 ## If you want more...
 Did you finish the above and want to learn more? Try some of the following methods to bolster your CoffeeBot.
 
@@ -97,9 +99,8 @@ If your user orders a drink and completes the flow, and they try to make another
 3. In the response section, click on the three button menu on the right and click on `Open context editor`
 4. Fill in both of the variables (`drink` and `number`) and set the values to `null`
 5. Click on the three dot menu on the right side of original Slots node `Order Drink`, and select `Move`. Then, click the new context clearing node and move to `As Child Node` (So, the parent node is the context clearing node, and the slots node is the child)
-6. Go to the section called `And finally` at the bottom of the context clearing node. Select `Jump to` and click the slots node, then `If bot recognizes condition`
-7. Change the condition of the slots node from `#order-drink` to `true` (Use this condition if you want the node to always fire)
-8. Try it out! Without clearing the try it out panel, order a drink. Once finished, try ordering another drink and it should prompt you for the two needed variables again. Here's what the finished context clearing node will look like:
+6. Go to the section called `And finally` at the bottom of the context clearing node. Select `Skip user input`.
+7. Try it out! Without clearing the try it out panel, order a drink. Once finished, try ordering another drink and it should prompt you for the two needed variables again. Here's what the finished context clearing node will look like:
 ![clear context](https://github.com/desmarchris/think-lab/blob/master/pictures/clear-context.png)
 
 ### Help - Digressions
