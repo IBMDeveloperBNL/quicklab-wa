@@ -49,11 +49,11 @@ Below the output of the finished intents:
     - cappuccino
     - latte
     - tea
-6. Exit the page (1), and click on `System entities` (2) underneath the `Entities` tab.
+6. Exit the page (1).
 
 ![system entities 1](./pictures/sys-entity-1.png)
 
-7. Turn on `@sys-number`.
+7. Click on `System entities` (2) underneath the `Entities` tab and turn on `@sys-number`.
 
 ![system entities 2](./pictures/sys-entity-2.png)
 
@@ -82,8 +82,9 @@ Below an example of the finished dialog tree with the `Order Drink` node open:
 
 ![finished dialog](./pictures/finished-dialog.png)
 
-## If you want more...
-Did you finish the above and want to learn more? Try some of the following methods to bolster your CoffeeBot.
+**CONGRATULATIONS!!** :smiley: :+1: 
+
+You successfully completed the lab!! Want to learn more? Try some of the following methods to bolster your CoffeeBot.
 
 ### Resetting context
 If your user orders a drink and completes the flow, and they try to make another order, the values found from the first flow will still be there so they will not be able to order something else. To fix this, we need to clear the context after a successful order so the values are not stored for the next order.
