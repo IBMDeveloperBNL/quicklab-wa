@@ -36,6 +36,7 @@ We will be creating a bot to take coffee orders.
     - #thanks (User thanks the bot)
   
 Below the output of the finished intents:
+
 ![finished intents](https://github.com/desmarchris/think-lab/blob/master/pictures/finished-intents.png)
 
 ## Building Entities
