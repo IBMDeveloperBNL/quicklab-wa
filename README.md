@@ -1,5 +1,5 @@
-# How to build a chatbot using Watson
-We will be creating a bot to take coffee orders.
+# How to build a virtual assistant with Watson
+We will be creating an assistant to take coffee orders.
 
 ## Creating an IBM Cloud Account
 1. Go to this link and create an account: https://ibm.biz/Bd2Uv6.
@@ -21,7 +21,7 @@ Once in the tooling, click the `My first skill` tile to go to the `Skills` secti
 2. Name the new intent `order-drink`.
 3. Add a description of what the intent will do. For this, let's use "User wants to order a drink.".
 4. Hit `Enter` to create the intent.
-5. Start adding a few exaxmples of how a user would order a drink (at least 5 examples are recommended). Click `Add example` to add a sample line. Let's use the following:
+5. Start adding a few examples of how a user would order a drink (at least 5 examples are recommended). Click `Add example` to add a sample line. Let's use the following lines:
 
     - i would like to order a coffee please
     - I need some caffeine
@@ -29,13 +29,13 @@ Once in the tooling, click the `My first skill` tile to go to the `Skills` secti
     - a cappuccino would be lovely
     - a latte please
 
-6. Open the `Try it Out` panel by clicking on the speech bubble in the upper right corner. This allows you to test how your bot will respond.
-7. Wait for the bot to finish training, then type `can I order a coffee`. It should classify the intent as `#order-drink`. Even though you didn't train the intent on this exact sentence, Watson can still understand it.
-8. Add a few more intents to make your bot more robust. For this, click <img src='./pictures/back.png' height='12'> button, followed by the `Create Intent` button. Next, create the following intents and add a few examples to each:
+6. Open the `Try it Out` panel by clicking on the speech bubble in the upper right corner. This allows you to test how your assistant will respond.
+7. Wait for the assistant to finish training, then type `can I order a coffee`. It should classify the intent as `#order-drink`. Even though you didn't train the intent on this exact sentence, Watson can still understand it.
+8. Add a few more intents to make your assistant more robust. For this, click <img src='./pictures/back.png' height='12'> button, followed by the `Create Intent` button. Next, create the following intents and add a few examples to each:
 
     - #see-menu (User wants to see what's on the menu)
-    - #greetings (User greets the bot)
-    - #thanks (User thanks the bot)
+    - #greetings (User greets the assistant)
+    - #thanks (User thanks the assistant)
   
     Below the output of the finished intents:
 
@@ -101,7 +101,7 @@ If your user orders a drink and completes the flow, and they try to make another
 1. Create a node above the Slots node `Order Drinks` called `Order Drinks - Clear Context`.
 2. Set the condition to `#order-drink`.
 3. In the `Assistant responds` section, click on the three button menu on the right and click on `Open context editor`.
-4. Fill in both of the variables (`drink` and `number`) and set the values to `null`.
+4. Fill in both variables (`drink` and `number`) and set the values to `null`.
 5. Click on the three dot menu on the right side of original Slots node `Order Drinks`, and select `Move`. Then, click the new context clearing node and move to `As Child Node` (So, the parent node is the context clearing node, and the slots node is the child).
 6. Go to the section called `Then assistant should` at the bottom of the context clearing node. Select `Skip user input`.
 7. Try it out! Without clearing the try it out panel, order a drink. Once finished, try ordering another drink and it should prompt you for the two needed variables again. Here's what the finished context clearing node will look like:
