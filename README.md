@@ -2,7 +2,7 @@
 We will be creating a bot to take coffee orders.
 
 ## Creating an IBM Cloud Account
-1. Go to this link and create an account: https://ibm.biz/Bd2Um2.
+1. Go to this link and create an account: https://ibm.biz/Bd2Uv6.
 2. Or, go to https://cloud.ibm.com/ and login if you have an account already.
 
 ## Provisioning a Watson Assistant instance
@@ -14,10 +14,10 @@ We will be creating a bot to take coffee orders.
 6. Click on `Launch Watson Assistant`.
 
 ## Creating a skill
-1. Once in the tooling, click the `My first skill` tile go to the **Skills** section.
+1. Once in the tooling, click the `My first skill` tile to go to the `Skills` section.
 
 ## Creating Intents
-1. Once in the **Skills** section, click `Create intent`.
+1. Once in the `Skills` section, click `Create intent`.
 2. Name the new intent `order-drink`.
 3. Add a description of what the intent will do. For this, let's use "User wants to order a drink.".
 4. Hit `Enter` to create the intent.
