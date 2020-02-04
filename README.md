@@ -2,13 +2,13 @@
 We will be creating an assistant to take coffee orders.
 
 ## Creating an IBM Cloud Account
-1. Go to this link and create an account: https://ibm.biz/Bd2kJn.
-2. Or, go to https://cloud.ibm.com/ and login if you have an account already.
+1. Go to this link and create an account: https://ibm.biz/BdzkM9.
+2. If you already have an account, go to the same [link](https://ibm.biz/BdzkM9) and click **Log in** on the top right of the page to continue.
 
 ## Provisioning a Watson Assistant instance
-1. Once logged in, click on `Catalog` in the upper right corner of the screen.
+1. Once logged in, click on `Catalog` positioned on the right-hand side of the topbar.
 2. Search for `Assistant`.
-3. Under the `AI` Category, click on `Assistant`.
+3. Under the `AI` Category, click on `Watson Assistant`.
 4. Scroll down and make sure `Lite` Plan is selected for the free plan.
 5. Click `Create`.
 6. Click on `Launch Watson Assistant`.
@@ -31,7 +31,10 @@ Once in the tooling, click the `My first skill` tile to go to the `Skills` secti
 
 6. Open the `Try it Out` panel by clicking on the speech bubble in the upper right corner. This allows you to test how your assistant will respond.
 7. Wait for the assistant to finish training, then type `can I order a coffee`. It should classify the intent as `#order-drink`. Even though you didn't train the intent on this exact sentence, Watson can still understand it.
-8. Add a few more intents to make your assistant more robust. For this, click <img src='./pictures/back.png' height='12'> button, followed by the `Create Intent` button. Next, create the following intents and add a few examples to each:
+
+    Note that because we haven't trained the assistant yet on how to respond, the answer is still `I didn't understand. You can try rephrasing.`. This will change once we create the dialog.
+
+8. Add a few more intents to make your assistant more robust. For this, click the <img src='./pictures/back.png' height='12'> button, followed by the `Create Intent` button. Next, create the following intents and add a few examples to each:
 
     - #see-menu (User wants to see what's on the menu)
     - #greetings (User greets the assistant)
@@ -50,13 +53,14 @@ Once in the tooling, click the `My first skill` tile to go to the `Skills` secti
 1. In the menu on the lef-hand side, click on `Entities`.
 2. Click `Create entity` and add the name `drink`. Press Enter to actually create the intent.
 3. Turn `Fuzzy Matching` on if you want Watson to understand misspellings (should be on by default).
-4. Add a value `coffee` with the synonym of `cafe`. Click `Add value` to actuall add the new value with its synonyms.
+4. Add a value `coffee` with the synonym of `cafe`. Click `Add value` to actually add the new value with its synonym.
 5. Complete this section by adding some additional values that you allow your users to order and any synonyms, for example:
 
     - espresso
     - cappuccino
     - latte
     - tea
+
 6. Exit the page (1).
 
     ![system entities 1](./pictures/sys-entity-1.png)
@@ -65,9 +69,9 @@ Once in the tooling, click the `My first skill` tile to go to the `Skills` secti
 
     ![system entities 2](./pictures/sys-entity-2.png)
 
-Here is how your finished entity `@drink` should look:
+    Here is how your finished entity `@drink` should look:
 
-!   [finished entity](./pictures/finished-entity.png)
+    ![finished entity](./pictures/finished-entity.png)
 
 ## Creating a Dialog
 1. In the menu on the lef-hand side, click `Dialog`. This brings you to the dialog that was already part of the `My first skill` skill.
@@ -75,7 +79,7 @@ Here is how your finished entity `@drink` should look:
 3. Click `Add node`, and name it `Greetings`.
 4. Add your `#greetings` intent as the field for `If assistant recognizes`.
 5. Fill in a response that says something like "Hi! How can I help you today?".
-6. Create two more nodes for `#thanks` and `#see-menu` and add responses.
+6. Create two more nodes for the intents `#thanks` and `#see-menu` and add responses.
 7. Create another node and name it `Order Drink`.
 8. To the right of the name, click on `Customize`.
 9. Turn on `Slots` and hit `Apply`.
