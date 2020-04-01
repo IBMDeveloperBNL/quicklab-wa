@@ -112,6 +112,29 @@ If your user orders a drink and completes the flow, and they try to make another
 
     ![clear context](./pictures/clear-context.png)
 
+## [Optional] Upgrading to Plus Trial
+To make Web Chat appear, we'll need a Plus Trial account. You don't need a credit card for this and won't be charged. Find the `Try plus plan` button anywhere in the tooling, and click to find the button to `Try Plus Plan`. You find one when selecting your assistant. For this, click (1) to go the assistants section and click (2) to open your assistant. The `Try Plus Plan` button should be at the Search section at the bottom of the page.
+
+![try plus plan](./pictures/try-plus-plan.png)
+
+## [Optional] Deploying Web Chat
+Now that we have a functioning assistant, let's deploy it to a site to see how it will look for our coffee customers. If you have an existing page you'd like to embed, you can follow the steps below until we get to opening the sample HTML page. Otherwise, use the sample HTML page.
+1. Make sure you're inside your assistant. Follow the steps (1) and (2) in the screenshot above to get to your assistant. By default your assistant is named `My first assistant`.
+2. On the right side of the screen, click `Integrate Web Chat`.
+3. Select Web Chat, and click `Create`.
+4. We'll revisit the customization in a bit. For now, scroll down to the embed script titled `Add the chat UI to your web page` and leave this page open.
+5. On the homepage of this repo, open the file `web-chat-example.html` in a new tab.
+6. Open the `Raw` format of the file.
+7. Save the page using `.html`.
+8. Open this file in your computer's text editor (Note: for Mac, you have to Open the TextEdit app, choose File > Open, then select the document. Click Options at the bottom of the TextEdit dialog, then select “Ignore rich text commands.” Click Open.)
+9. Back inside Watson Assistant, copy the embed script on the Web Chat page and paste over the section that says `INSERT EMBED SCRIPT HERE`.
+8. Save the file.
+9. Find the file in your downloads / desktop, and open it in your browser.
+10. Start chatting with your bot!
+
+### Customizing Web Chat
+Back in the Web Chat configuration page within Watson Assistant, you can customize how Web Chat appears on your page. Try changing the accent color, adding your own title, or messing with the font. Make sure you select `Save changes` at the bottom, and refresh your mock coffee website.
+
 ## [Optional] Help - Digressions
 Sometimes, you want an intent to be handled no matter where the user is in their flow. Think of Digressions as a global 'manage handlers': they allow you to respond to an intent even if a user is in the middle of a process flow, and then it allows them to return to their prior flow. If your user wants some help talking to the assistant anywhere in your assistant, this is a good intent to have digressions enabled.
 
