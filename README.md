@@ -125,7 +125,7 @@ Now that we have a functioning assistant, let's deploy it to a site to see how i
 4. We'll revisit the customization in a bit. For now, scroll down to the embed script titled `Add the chat UI to your web page` and leave this page open.
 5. On the homepage of this repo, open the file `web-chat-example.html` in a new tab.
 6. Open the `Raw` format of the file.
-7. Save the page using `.html`.
+7. Save the page as plain source file using `.html` as extension.
 8. Open this file in your computer's text editor (Note: for Mac, you have to Open the TextEdit app, choose File > Open, then select the document. Click Options at the bottom of the TextEdit dialog, then select “Ignore rich text commands.” Click Open.)
 9. Back inside Watson Assistant, copy the embed script on the Web Chat page and paste over the section that says `<!-- INSERT EMBED SCRIPT HERE -->`.
 8. Save the file.
