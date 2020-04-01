@@ -127,7 +127,7 @@ Now that we have a functioning assistant, let's deploy it to a site to see how i
 6. Open the `Raw` format of the file.
 7. Save the page using `.html`.
 8. Open this file in your computer's text editor (Note: for Mac, you have to Open the TextEdit app, choose File > Open, then select the document. Click Options at the bottom of the TextEdit dialog, then select “Ignore rich text commands.” Click Open.)
-9. Back inside Watson Assistant, copy the embed script on the Web Chat page and paste over the section that says `INSERT EMBED SCRIPT HERE`.
+9. Back inside Watson Assistant, copy the embed script on the Web Chat page and paste over the section that says `<!-- INSERT EMBED SCRIPT HERE -->`.
 8. Save the file.
 9. Find the file in your downloads / desktop, and open it in your browser.
 10. Start chatting with your bot!
