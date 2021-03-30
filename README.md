@@ -2,20 +2,20 @@
 We will be creating an assistant to take coffee orders.
 
 ## Creating an IBM Cloud Account
-1. Go to this link and create an account: https://ibm.biz/BdqfAv.
-2. If you already have an account, go to the same [link](https://ibm.biz/BdqfAv) and click **Log in** on the top right of the page to continue.
+1. Go to this link and create an account: https://ibm.biz/BdfjsX.
+2. If you already have an account, go to the same [link](https://ibm.biz/BdfjsX) and click **Log in** on the top right of the page to continue.
 
 ## Provisioning a Watson Assistant instance
 1. Once logged in, click on `Catalog` positioned on the right-hand side of the topbar.
 2. Search for `Assistant`.
-3. Under the `AI` Category, click on `Watson Assistant`.
-4. Scroll down and make sure `Lite` Plan is selected for the free plan.
+3. Under the `AI / Machine Learning` Category, click on `Watson Assistant`.
+4. Scroll down and make sure the `Lite` Plan is selected for the free plan.
 5. Click `Create`.
 6. Click on `Launch Watson Assistant`.
 
 ## Creating Intents
 
-Once in the tooling, click the `My first skill` tile to go to the `Skills` section.
+If not opened automatically for you, click the `My first skill` tile to go to the `Skills` section. 
 
 1. Once in the `Skills` section, click `Create intent`.
 2. Name the new intent `order-drink`.
@@ -29,7 +29,7 @@ Once in the tooling, click the `My first skill` tile to go to the `Skills` secti
     - a cappuccino would be lovely
     - a latte please
 
-6. Open the `Try it Out` panel by clicking on the speech bubble in the upper right corner. This allows you to test how your assistant will respond.
+6. Open the `Try it` panel by clicking on the speech bubble in the upper right corner. This allows you to test how your assistant will respond.
 7. Wait for the assistant to finish training, then type `can I order a coffee`. It should classify the intent as `#order-drink`. Even though you didn't train the intent on this exact sentence, Watson can still understand it.
 
     Note that because we haven't trained the assistant yet on how to respond, the answer is still `I didn't understand. You can try rephrasing.`. This will change once we create the dialog.
@@ -65,7 +65,7 @@ Once in the tooling, click the `My first skill` tile to go to the `Skills` secti
 
     ![system entities 1](./pictures/sys-entity-1.png)
 
-7. Click on `System entities` (2) underneath the `Entities` tab and turn on `@sys-number`.
+7. Click on `System entities` (2) underneath the `Entities` tab and turn on `@sys-number` (3).
 
     ![system entities 2](./pictures/sys-entity-2.png)
 
@@ -79,7 +79,7 @@ Once in the tooling, click the `My first skill` tile to go to the `Skills` secti
 3. Click `Add node`, and name it `Greetings`.
 4. Add your `#greetings` intent as the field for `If assistant recognizes`.
 5. Fill in a response that says something like "Hi! How can I help you today?".
-6. Create two more nodes for the intents `#thanks` and `#see-menu` and add responses.
+6. Add two more nodes for the intents `#thanks` and `#see-menu` and add responses.
 7. Create another node and name it `Order Drink`.
 8. To the right of the name, click on `Customize`.
 9. Turn on `Slots` and hit `Apply`.
@@ -108,7 +108,7 @@ If your user orders a drink and completes the flow, and they try to make another
 4. Fill in both variables (`drink` and `number`) and set the values to `null`.
 5. Click on the three dot menu on the right side of original Slots node `Order Drinks`, and select `Move`. Then, click the new context clearing node and move to `As Child Node` (So, the parent node is the context clearing node, and the slots node is the child).
 6. Go to the section called `Then assistant should` at the bottom of the context clearing node. Select `Skip user input`.
-7. Try it out! Without clearing the try it out panel, order a drink. Once finished, try ordering another drink and it should prompt you for the two needed variables again. Here's what the finished context clearing node will look like:
+7. Try it out! Without clearing the 'Try it' panel, order a drink. Once finished, try ordering another drink and it should prompt you for the two needed variables again. Here's what the finished context clearing node will look like:
 
     ![clear context](./pictures/clear-context.png)
 
@@ -144,9 +144,9 @@ Sometimes, you want an intent to be handled no matter where the user is in their
 4. Go into the `Customize` portion of the node by clicking in the upper right.
 5. Click on the `Digressions` tab.
 6. Expand `Digressions can come into this node` and enable `Return after digression` (Digressions should be on by default, this setting allows you to handle the intent and then return back to the flow). Click `Apply` to complete this step.
-7. Now to test this out, we need to get in the middle of our order drink flow. But first, since it is a slot, we need to go into the `Digressions` tab in the `Order Drinks` slots node.
+7. Now to test this out, we need to get in the middle of our order drink flow. But first, since it is a slot, we need to go into the `Digressions` tab in the `Order Drinks` node.
 8. Turn on `Allow digressions away while slot filling` and click the button that only allows nodes with returns enabled. This will help you to control which nodes you want to allow to digress to.
 
     ![Enable Digressions](./pictures/enable-digressions.png)
 
-9. Try it out by saying "order drink", then when asked for what kind of drink you want, say "help". You should see a response from your help node with another follow up message for the next slot filling question.
+9. Try it by saying "order drink", then when asked for what kind of drink you want, say "help". You should see a response from your help node with another follow up message for the next slot filling question.
