@@ -2,8 +2,8 @@
 We will be creating an assistant to take coffee orders.
 
 ## Creating an IBM Cloud Account
-1. Go to this link and create an account: https://ibm.biz/BdfjsX.
-2. If you already have an account, go to the same [link](https://ibm.biz/BdfjsX) and click **Log in** on the top right of the page to continue.
+1. Go to this link and create an account: https://ibm.biz/BdfydT.
+2. If you already have an account, go to the same [link](https://ibm.biz/BdfydT) and click **Log in** on the top right of the page to continue.
 
 ## Provisioning a Watson Assistant instance
 1. Once logged in, click on `Catalog` positioned on the right-hand side of the topbar.
@@ -80,7 +80,7 @@ If not opened automatically for you, click the `My first skill` tile to go to th
 4. Add your `#greetings` intent as the field for `If assistant recognizes`.
 5. Fill in a response that says something like "Hi! How can I help you today?".
 6. Add two more nodes for the intents `#thanks` and `#see-menu` and add responses.
-7. Create another node and name it `Order Drink`.
+7. Create another node and name it `Order Drinks`.
 8. To the right of the name, click on `Customize`.
 9. Turn on `Slots` and hit `Apply`.
 10. Add the intent `#order-drink`to `If assistant recognizes`.
