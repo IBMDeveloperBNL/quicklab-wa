@@ -2,8 +2,8 @@
 We will be creating an assistant to take coffee orders.
 
 ## Creating an IBM Cloud Account
-1. Go to this link and create an account: https://ibm.biz/BdfydT.
-2. If you already have an account, go to the same [link](https://ibm.biz/BdfydT) and click **Log in** on the top right of the page to continue.
+1. Go to this link and create an account: https://ibm.biz/Bdffsv.
+2. If you already have an account, go to the same [link](https://ibm.biz/Bdffsv) and click **Log in** on the top right of the page to continue.
 
 ## Provisioning a Watson Assistant instance
 1. Once logged in, click on `Catalog` positioned on the right-hand side of the topbar.
