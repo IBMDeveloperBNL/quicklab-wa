@@ -127,9 +127,9 @@ After having entered the sample sentences, you are ready to create the conversat
 3. Click **Define customer response**.
 4. Select **Options** as the response type.
 5. Add the following options with synonyms:
-   - **coffee** (synonyms: cafe, java, brew)
+   - **coffee** (synonyms: espresso, latte, cappuccino)
    - **tea** (synonyms: chai)
-   - **soft drink** (synonyms: soda, pop, cola)
+   - **soft drink** (synonyms: soda, cola)
 6. Click **Apply** to save the options.
 7. The response will be automatically saved to an action variable named to something like `1. [text]`.
 
